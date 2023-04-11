@@ -1,6 +1,6 @@
 # *Facebook-C-Dataset*
 
-The dataset constructed in the paper BGEK: Incorporating External Knowledge[[d1\]](#_msocom_1) into Graph Convolutional Networks for Cantonese Rumor Detection in Online Social Networks, which contains 1924 events and 64221 posts.
+The dataset constructed in the paper BGEK: Incorporating External Knowledge[[d1\]](#_msocom_1) into Graph Convolutional Networks for Cantonese Rumor Detection in Online Social Networks, which contains 1925 events and 64221 posts.
 
 ## Facebook_id_label
 It contains the information of source tweets, including uuid and label.
