@@ -1,52 +1,16 @@
-# Facebook-C-Dataset
-## 1. data-Facebook
+# *Facebook-C-Dataset*
 
-### 1.1 afterdataset-all-Facebook.csv
+The dataset constructed in the paper BGEK: Incorporating External Knowledge[[d1\]](#_msocom_1) into Graph Convolutional Networks for Cantonese Rumor Detection in Online Social Networks, which contains 1925 events and 64221 posts.
 
-uuid: unique identifier
+## Facebook_id_label
+It contains the information of source tweets, including uuid and label.
 
-label: 0 for no_rumor and 1 for rumor
+The tweet with a label of '1' is annotated as a rumor. Otherwise, a non-rumor.
 
-type: topic type
+## Facebook_tree.csv
+It contains the graph structure information of retweets/comments, including uuid, parent, child, text.
 
-### 1.2 embed_bert.pickle
-
-1924*768
-
-features of source tweet
-
-### 1.3 embed_knowledge.csv
-
-777*768
-
-external knowledge
-
-### 1.4 node_gcn_tensor.csv
-
-1924*256
-
-features of structural feature
-
-### 1.5 order_tensor.py
-
-Align the order of structural and textual features
-
-## 2. graph_model.py
-
-GCN for external knowledge extraction
-
-## 3. knoeledge_model.py
-
-Adjacency matrix generation
-
-## 4. model.py
-
-final model for rumor detection
-
-## 5. train.py
-
-final train model for rumor detection
-
-## 6. util.py
-
-util for rumor detection 
+- uuid: tweet id of source tweet
+- parent: index of parent node
+- child: index of current node
+- text: space separated index-count pairs, where a index-count pair is in format of _index:count_. Index-count pairs are extracted from text contents of tweets
